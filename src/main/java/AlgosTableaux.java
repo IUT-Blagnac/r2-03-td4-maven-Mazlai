@@ -105,8 +105,9 @@ public class AlgosTableaux
     /**
      * Construit un nouveau tableau sans doublons, pourtant similaire au tableau donne en parametre.
      *
-     * @param pfTab IN/OUT : tableau
+     * @param pfTab IN : tableau
      * @param pfNbEl IN : nombre de cases remplies dans le tableau
+     * @param tabsansDoublons OUT : le tableau sans doublons
      * @return la nouvelle taille du tableau sans doublons
      */
     public static int eliminerDoublons(int[] pfTab, int[] tabsansDoublons, int pfNbEl) {               
@@ -170,7 +171,7 @@ public class AlgosTableaux
      *
      * @param pfTab    IN  : un tableau de valeurs entieres
      * @param pfNbEl   IN  : le nombre de valeurs
-     * @param pfIndice OUT : le tableau des indices
+     * @param pfIndices OUT : le tableau des indices
      *
      * @return le nombre d'occurrences du max
     **/
