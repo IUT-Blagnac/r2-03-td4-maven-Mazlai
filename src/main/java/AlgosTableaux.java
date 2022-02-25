@@ -9,11 +9,11 @@ import java.util.Scanner;
 public class AlgosTableaux
 {
     /**
-     * Demande à l'utilisateur de saisir un entier, jusqu'à ce que
-     * l'entier saisi soit entre les deux bornes en paramètres.
+     * Demande a l'utilisateur de saisir un entier, jusqu'a ce que
+     * l'entier saisi soit entre les deux bornes en parametres.
      *
-     * @param pfBorneInf IN : borne inférieure
-     * @param pfBorneSup IN : borne supérieure
+     * @param pfBorneInf IN : borne inferieure
+     * @param pfBorneSup IN : borne superieure
      *
      * @return un entier entre pfBorneInf et pfBorneSup, compris
      */
@@ -30,13 +30,13 @@ public class AlgosTableaux
     }
 
     /**
-     * Demande à l'utilisateur :
+     * Demande a l'utilisateur :
      *   1. de saisir le nombre de cases qu'il souhaite remplir, et
-     *      répète l'opération, jusqu'à ce que ce nombre soit
+     *      repete l'operation, jusqu'a ce que ce nombre soit
      *      acceptable
      *   2. de remplir les cases une à une.
      *
-     * @param pfTab OUT : tableau à remplir
+     * @param pfTab OUT : tableau a remplir
      *
      * @return le nombre de cases remplies dans le tableau
      */
@@ -58,7 +58,7 @@ public class AlgosTableaux
     }
 
     /**
-     * Affiche le tableau en paramètre.
+     * Affiche le tableau en parametre.
      *
      * @param pfTab IN : tableau
      * @param pfNbEl IN : nombre de cases remplies dans le tableau
@@ -76,7 +76,7 @@ public class AlgosTableaux
     }
 
     /**
-     * Inverse le contenu du tableau en paramètre.
+     * Inverse le contenu du tableau en parametre.
      *
      * @param pfTab IN/OUT : tableau
      * @param pfNbEl IN : nombre de cases remplies dans le tableau
@@ -103,7 +103,7 @@ public class AlgosTableaux
     }    
     
     /**
-     * Construit un nouveau tableau sans doublons, pourtant similaire au tableau donné en paramètre.
+     * Construit un nouveau tableau sans doublons, pourtant similaire au tableau donne en parametre.
      *
      * @param pfTab IN/OUT : tableau
      * @param pfNbEl IN : nombre de cases remplies dans le tableau
@@ -113,7 +113,7 @@ public class AlgosTableaux
         int newNbEl = 0;
         int a = 0;
                 
-        /*1er élement du tableau renseigné, reporté au nouveau tableau à la même place*/
+        /*1er element du tableau renseigne, reporte au nouveau tableau a la meme place*/
         for (int i=0; i<pfNbEl; i++)  {
             boolean doublons = false;
             for (int j=0; j<i; j++) {                
@@ -121,7 +121,7 @@ public class AlgosTableaux
                     doublons = true;
                 }    
             }
-            /*S'il n'y a pas de doublons, on peut réafficher le contenu*/
+            /*S'il n'y a pas de doublons, on peut reafficher le contenu*/
             if (!doublons) {
                 tabsansDoublons[a] = pfTab[i];
                 newNbEl++;
@@ -132,7 +132,7 @@ public class AlgosTableaux
     }   
     
     /**
-     * Affiche le tableau en paramètre.
+     * Affiche le tableau en parametre.
      *
      * @param pfTab IN : tableau
      * @param pfNbEl IN : nombre de cases remplies dans le tableau
@@ -151,9 +151,9 @@ public class AlgosTableaux
     
     /*
      * Retourne la valeur maximale d'un tableau
-     * @param pfTab IN : un tableau de valeurs entières
+     * @param pfTab IN : un tableau de valeurs entieres
      * @param pfNbEl IN : le nombre de valeurs
-     * @return la valeur entière maximale
+     * @return la valeur entiere maximale
      */
     public static int valMaxTab(int pfNbEl, int pfTab[]) {
         int valMax = pfTab[0];
@@ -168,7 +168,7 @@ public class AlgosTableaux
     /**
      * Stocke les indices des occurences du maximum
      *
-     * @param pfTab    IN  : un tableau de valeurs entières
+     * @param pfTab    IN  : un tableau de valeurs entieres
      * @param pfNbEl   IN  : le nombre de valeurs
      * @param pfIndice OUT : le tableau des indices
      *
@@ -190,7 +190,7 @@ public class AlgosTableaux
     }    
     
     /**
-     * Affiche le tableau en paramètre.
+     * Affiche le tableau en parametre.
      *
      * @param pfTab IN : tableau
      * @param pfNbEl IN : nombre de cases remplies dans le tableau
@@ -219,23 +219,23 @@ public class AlgosTableaux
         int nbOccurences;
         
         // Ajouter les appels aux algorithmes :
-        //   - à saisirTableau
+        //   - a saisirTableau
         nbVal = saisirTableau(tab);
-        //   - puis à afficherTableau
+        //   - puis a afficherTableau
         afficherTableau(tab, nbVal);          
         for (int i=0; i<nbVal; i++) {            
             tabMax[i] = tab[i];
         }
-        //   - puis à afficher inverserTableau        
+        //   - puis a afficher inverserTableau        
         afficherInverserTableau(tab, nbVal);
-        //   - puis à afficher eliminerDoublons        
+        //   - puis a afficher eliminerDoublons        
         nbVal2 = eliminerDoublons(tab, tabSD, nbVal);       
         afficherTableauSansDoublons(tabSD, nbVal2); 
-        //   - puis à afficher indicesMax
+        //   - puis a afficher indicesMax
         nbOccurences = indicesMax(tabMax, tabMax.length, indices);
         afficherTableauIndices(indices, nbOccurences);
         
-        /*Pour la fonction eliminerDoublons, il est très anormal de ne pas avoir un rendu avec
-        des 0 s'ils sont renseignés dans le tableau (aux premiers tests) et aussi inversement !*/ 
+        /*Pour la fonction eliminerDoublons, il est tres anormal de ne pas avoir un rendu avec
+        des 0 s'ils sont renseignes dans le tableau (aux premiers tests) et aussi inversement !*/ 
     }    
 }
